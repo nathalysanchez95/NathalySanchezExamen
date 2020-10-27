@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NathalySanchezExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Universidad Israel" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+            </Frame>
+
+            <Label Padding="20"  x:Name="lblMensajeIni" HorizontalTextAlignment="Center" FontSize="20" />
+
+            <Grid Padding="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="lblNombre" Grid.Row="0" Grid.Column="0" Text="Ingrese un Nombre" />
+                <Label x:Name="lblPago" Grid.Row="1" Grid.Column="0" Text="Ingrese Pago Inicial" />
+                <Label x:Name="lblPagoMen" Grid.Row="2" Grid.Column="0" Text="Pago Mensual" />
+                
+               
+
+                <Entry  x:Name="txtNombre" Grid.Row="0" Grid.Column="1"  Keyboard="Text" />
+                <Entry  x:Name="txtPagoI" Grid.Row="1" Grid.Column="1" Placeholder="El pago debe ser menor a 1800" Keyboard="Numeric" />
+                <Entry  x:Name="txtPagoMen" Grid.Row="2" Grid.Column="1"  Keyboard="Numeric"  IsReadOnly="True"/>
+              
+
+                
+
+            </Grid>
+
+            <Button Text="Calcular" x:Name="btnCalcular" WidthRequest      ="100"
+                                                    HeightRequest     ="50"
+                                                    TextColor="White"
+                                                    VerticalOptions   ="Center"
+                                                    HorizontalOptions ="Center"
+                                                    BackgroundColor   ="#2196F3"
+                                                    Clicked="btnCalcular_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
